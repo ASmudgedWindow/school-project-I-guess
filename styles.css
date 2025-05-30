@@ -1,0 +1,125 @@
+:root {
+  --bg-darkest: #0c0c12;
+  --bg-dark: #15151a;
+  --card-bg: #191922;
+  --primary: #1a8fff;
+  --accent: #23d8a3;
+  --text-light: #eaeaea;
+  --card-border: #232334;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: var(--bg-darkest);
+  color: var(--text-light);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 2.5rem 1rem 1rem 1rem;
+  background: var(--bg-dark);
+  text-align: center;
+}
+
+.glow-title {
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow:
+    0 0 12px #23d8a3,
+    0 0 24px #1a8fff,
+    0 0 48px #1a8fff,
+    0 0 80px #23d8a344;
+  letter-spacing: 2.5px;
+  margin: 0 0 0.7rem 0;
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+.glow-title:hover {
+  font-size: 2.8rem;
+  color: #00008b;
+    text-shadow:
+    0 0 12px #a259ff,   
+    0 0 24px #4f8cff,   
+    0 0 48px #4f8cff,   
+    0 0 80px #a259ff55; 
+}
+
+nav {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.3em 1.2em;
+  border-radius: 999px;
+  transition: background 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+nav a:hover, nav a:focus {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 0 8px 2px #1a8fff99;
+  outline: none;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1rem 2rem 1rem;
+  gap: 2.2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 1.1rem;
+  box-shadow: 0 6px 24px 0 rgba(26, 143, 255, 0.07);
+  padding: 2rem 2rem 1.2rem 2rem;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1.5px solid var(--card-border);
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--primary);
+  font-size: 1.45rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1.2rem 0 0.5rem 0;
+  color: #747481;
+  font-size: 0.97rem;
+  background: transparent;
+  letter-spacing: 1.2px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card {
+    padding: 1.2rem 0.8rem 0.8rem 0.8rem;
+    max-width: 99vw;
+  }
+  .glow-title {
+    font-size: 2rem;
+  }
+  nav {
+    gap: 1rem;
+  }
+}
