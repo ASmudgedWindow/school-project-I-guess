@@ -43,7 +43,7 @@ header {
 }
 .glow-title:hover {
   font-size: 2.8rem;
-  color: #00008b;
+  color: rgb(30, 144, 255);
     text-shadow:
     0 0 12px #a259ff,   
     0 0 24px #4f8cff,   
